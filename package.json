@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vantaylo/Note-Taker-App.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/vantaylo/Note-Taker-App/issues"
+  },
+  "homepage": "https://github.com/vantaylo/Note-Taker-App#readme"
 }
