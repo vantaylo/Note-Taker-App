@@ -4,8 +4,11 @@ const path = require("path");
 
 //create server
 const app = express();
-
 const PORT = process.env.PORT || 5000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
 //routing
 app.get("/", function (req, res) {
