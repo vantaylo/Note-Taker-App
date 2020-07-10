@@ -16,13 +16,29 @@ router.get("/", function (req, res) {
 router.post("/", function (req, res) {
   let title = req.body.title;
   let text = req.body.text;
-  console.log("My note " + title + " " + text);
+  let newNote = {
+    title,
+    text,
+  };
 
-  fs.readFile(dataFile, (err, data) => {
+  console.log("My new note: " + newNote);
+
+  fs.readFile(dataFile, "utf8", (err, data) => {
     if (err) throw err;
     let notes = JSON.parse(data);
-    notes.push({ title, text });
-    console.log(notes);
+    var strNotes = JSON.stringify(data);
+
+    console.log("Result for var notes: " + strNotes);
+
+    notes.push(newNote);
+    console.log("All my notes: " + JSON.stringify(notes));
+
+    fs.writeFile(dataFile, JSON.stringify(notes), {}, function (err) {
+      if (err) console.log(err);
+      else {
+        console.log("File written successfully\n");
+      }
+    });
   });
 });
 
