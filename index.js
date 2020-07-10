@@ -19,6 +19,10 @@ app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/notes.html"));
 });
 
+app.use("/notes", require("./routes/html/notes"));
+
+app.use("/api/notes", require("./routes/api/notes"));
+
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname + "/public/index.html"));
 });
