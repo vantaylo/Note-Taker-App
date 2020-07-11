@@ -25,23 +25,39 @@ router.post("/", function (req, res) {
     text,
   };
 
-  console.log("My new note: " + newNote);
-
   fs.readFile(dataFile, "utf8", (err, data) => {
     if (err) throw err;
     let notes = JSON.parse(data);
     var strNotes = JSON.stringify(data);
 
-    console.log("Result for var notes: " + strNotes);
-
     notes.push(newNote);
-    console.log("All my notes: " + JSON.stringify(notes));
 
     fs.writeFile(dataFile, JSON.stringify(notes), {}, function (err) {
       if (err) console.log(err);
       else {
         res.json(newNote);
-        console.log("File written successfully\n");
+      }
+    });
+  });
+});
+
+router.delete("/:id", function (req, res) {
+  fs.readFile(dataFile, function (err, data) {
+    if (err) throw err;
+    let notes = JSON.parse(data);
+
+    for (var i = 0; i < notes.length; i++) {
+      noteId = notes[i].id;
+      if (noteId === req.params.id) {
+        notes.splice(i, 1);
+        break;
+      }
+    }
+
+    fs.writeFile(dataFile, JSON.stringify(notes), {}, function (err) {
+      if (err) console.log(err);
+      else {
+        res.status(200).send();
       }
     });
   });
