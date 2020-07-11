@@ -6,10 +6,10 @@ An application that can be used to write, save, and delete notes. This applicati
 
 ## Built With
 
--JavaScript
--NodeJS
--Node Packages:
-  -Express
+- JavaScript
+- NodeJS
+- Node Packages:
+  - Express
 
 ## Installation
 
