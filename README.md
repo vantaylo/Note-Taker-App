@@ -15,7 +15,7 @@ An application that can be used to write, save, and delete notes. This applicati
 
 Run npm install to install all dependencies. To use the application locally, run node index.js in your CLI, and then open http://localhost:8080 in your preferred browser. The Note Taker app is live on Heroku for you to use as well.
 
-## Deployed Link:
+## Deployed Link
 
 ## Preview
 
