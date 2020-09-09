@@ -4,7 +4,7 @@
 
 An application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-## Built With
+## Technologies
 
 - JavaScript
 - NodeJS
@@ -13,14 +13,7 @@ An application that can be used to write, save, and delete notes. This applicati
 
 ## Installation
 
-Run npm install to install all dependencies. To use the application locally, run node index.js in your CLI, and then open http://localhost:8080 in your preferred browser. The Note Taker app is live on Heroku for you to use as well.
-
-## Deployed Link
-[link to Heroku!](https://whispering-cliffs-70009.herokuapp.com/)
-
-## Preview
-![](NoteTakerAppGif.gif)
-
+Run npm install to install all dependencies. To use the application locally, run node index.js in your CLI, and then open http://localhost:8080 in your preferred browser.
 
 ## User Story
 
@@ -33,3 +26,9 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ## Business Context
 
 For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+
+## Preview
+
+[Deplyed link to Heroku!](https://whispering-cliffs-70009.herokuapp.com/)
+
+![](NoteTakerAppGif.gif)
