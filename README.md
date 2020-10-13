@@ -7,13 +7,8 @@ An application that can be used to write, save, and delete notes. This applicati
 ## Technologies
 
 - JavaScript
-- NodeJS
-- Node Packages:
-  - Express
-
-## Installation
-
-Run npm install to install all dependencies. To use the application locally, run node index.js in your CLI, and then open http://localhost:8080 in your preferred browser.
+- Node.js
+- Express.js
 
 ## User Story
 
@@ -29,6 +24,6 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 ## Preview
 
-[Deplyed link to Heroku!](https://whispering-cliffs-70009.herokuapp.com/)
+[Deplyed link to Heroku!](https://note-taker-w-express.herokuapp.com/)
 
 ![](NoteTakerAppGif.gif)
